@@ -31,6 +31,8 @@ Aplikasi PPDB Online ini dikembangkan oleh Mohamad Marstias Billy (Koncoweb) unt
 1. **Sistem Antrian**
    - Pengambilan nomor antrian online
    - Manajemen antrian untuk pendaftaran PPDB
+   ![sistem antrian + memungkinkan daftar di tempat atau online](src/antrian_ppdb-online.webp)
+
 
 2. **Pendaftaran Online**
    - Form pendaftaran siswa lengkap
