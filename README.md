@@ -2,6 +2,7 @@
 
 Sistem Pendaftaran Peserta Didik Baru (PPDB) Online
 tutorial : https://www.youtube.com/@mohmbilly
+/src/Snapshot_ppdb-online.png
 ## Informasi Lisensi
 
 by Mohamad Marstias Billy (Koncoweb)
