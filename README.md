@@ -1,8 +1,7 @@
 # PPDB Online
 
-### Sistem Pendaftaran Peserta Didik Baru (PPDB) Online
-### tutorial : https://www.youtube.com/@mohmbilly
-    
+Sistem Pendaftaran Peserta Didik Baru (PPDB) Online
+tutorial : https://www.youtube.com/@mohmbilly
 ## Informasi Lisensi
 
 by Mohamad Marstias Billy (Koncoweb)
@@ -66,10 +65,6 @@ Aplikasi PPDB Online ini dikembangkan oleh Mohamad Marstias Billy (Koncoweb) unt
 - Firebase (Authentication, Realtime Database, Firestore)
 
 ### Cara Instalasi
-#### WARNING : ganti src/firebase.ts dengan milik anda sendiri
-const firebaseConfig = {
-  apiKey: .......
-}
 
 1. Clone repository
 ```bash

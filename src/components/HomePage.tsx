@@ -77,7 +77,7 @@ function HomePage() {
           </Link>
 
           <Link 
-            to="/queue/teller" 
+            to="/pendaftaran-saya" 
             className="ios-card group hover:shadow-md transition-all duration-200"
           >
             <div className="flex flex-col items-center gap-4">
