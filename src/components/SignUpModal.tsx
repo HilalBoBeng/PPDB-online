@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from 'firebase/auth'
 import { auth, firestore } from '../firebase'
-import { doc, setDoc, getDoc } from 'firebase/firestore'
-import { useNavigate } from 'react-router-dom'
+import { setDoc, doc } from 'firebase/firestore'
 import { useAuth } from '../contexts/AuthContext'
 import toast from 'react-hot-toast'
 
 interface SignUpModalProps {
   isOpen: boolean
   onClose: () => void
+  onSuccess?: () => void  // Explicitly marked as optional
 }
 
 type FormType = 'signup' | 'login'
 
-function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
-  const navigate = useNavigate()
+function SignUpModal({ isOpen, onClose, onSuccess }: SignUpModalProps) {
   const { currentUser, userProfile, checkAndRouteUser } = useAuth()
   const [activeForm, setActiveForm] = useState<FormType>('signup')
   const [formData, setFormData] = useState({
@@ -26,14 +25,8 @@ function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
   })
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const [intendedPath, setIntendedPath] = useState<string | null>(null)
 
   useEffect(() => {
-    const savedPath = localStorage.getItem('intendedPath')
-    if (savedPath) {
-      setIntendedPath(savedPath)
-    }
-    
     setPersistence(auth, browserLocalPersistence)
       .catch((error) => {
         console.error('Persistence error:', error)
@@ -47,7 +40,17 @@ function SignUpModal({ isOpen, onClose }: SignUpModalProps) {
   }, [currentUser, userProfile])
 
   const handlePostLoginNavigation = () => {
-    onClose()
+    if (onSuccess) {
+      onSuccess()
+    } else {
+      onClose()
+      // If no onSuccess provided, handle default navigation
+      const intendedPath = localStorage.getItem('intendedPath')
+      if (intendedPath) {
+        window.location.href = intendedPath
+        localStorage.removeItem('intendedPath')
+      }
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

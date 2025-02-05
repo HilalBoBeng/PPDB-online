@@ -1,5 +1,4 @@
 import { X, Printer, Globe } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
 import PrintTicket from './PrintTicket'
 import SignUpModal from './SignUpModal'
 import { useState } from 'react'
@@ -12,7 +11,6 @@ interface ConfirmationModalProps {
 }
 
 function ConfirmationModal({ isOpen, onClose, ticketNumber, type }: ConfirmationModalProps) {
-  const navigate = useNavigate()
   const [showSignUp, setShowSignUp] = useState(false)
   
   if (!isOpen) return null
