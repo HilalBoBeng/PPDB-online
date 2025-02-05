@@ -65,16 +65,26 @@ Aplikasi PPDB Online ini dikembangkan oleh Mohamad Marstias Billy (Koncoweb) unt
 - Firebase (Authentication, Realtime Database, Firestore)
 
 ### Cara Instalasi
-<<<<<<< HEAD
-=======
-```bash #### WARNING : ganti src/firebase.ts dengan milik anda sendiri
+```Warning :
+sebelum 
+npm install
+ganti src/firebase.ts
+pada 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: .......
-}
-tutorial di https://youtu.be/2yZOCkcyNN4 ```
->>>>>>> 038d000769a5307c03ee5f51555dfb052a9876c9
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+dengan punya anda sendiri
+```
+
 
 1. Clone repository
+
 ```bash
 git clone [url-repository]
 ```
