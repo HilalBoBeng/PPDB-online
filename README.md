@@ -1,4 +1,8 @@
 # PPDB Online
+```bash
+###pin admin : 9999
+```
+
 
 Sistem Pendaftaran Peserta Didik Baru (PPDB) Online
 tutorial : https://www.youtube.com/@mohmbilly
