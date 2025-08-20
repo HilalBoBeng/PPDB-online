@@ -4,14 +4,13 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB0oEGAQ5LOtVZIjhJg9FO_f5paw1EGuYs",
-  authDomain: "debby-79cd4.firebaseapp.com",
-  databaseURL: "https://debby-79cd4-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "debby-79cd4",
-  storageBucket: "debby-79cd4.appspot.com",
-  messagingSenderId: "627228031116",
-  appId: "1:627228031116:web:7e91103c12fd9e5d58a3a9",
-  measurementId: "G-4QGN0VXC09"
+  apiKey: "AIzaSyDL-2vFwkMlM__S8Vam_SD1D8pk3G2exs8",
+    authDomain: "ppdb-online-361ef.firebaseapp.com",
+    projectId: "ppdb-online-361ef",
+    storageBucket: "ppdb-online-361ef.firebasestorage.app",
+    messagingSenderId: "559756267963",
+    appId: "1:559756267963:web:bcbb2b114e6c3381a4749e",
+    measurementId: "G-2NEQZ7SRFT"
 }
 
 const app = initializeApp(firebaseConfig)
